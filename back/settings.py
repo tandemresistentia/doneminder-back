@@ -32,8 +32,8 @@ if ENVIRONMENT == 'production':
             'NAME': 'railway',
             'USER': 'postgres',
             'PASSWORD':str(os.getenv('PGPASSWORD')),
-            'HOST': '',
-            'PORT': '6443',
+            'HOST': 'containers-us-west-128.railway.app',
+            'PORT': '7719',
         }
     }
 else:
