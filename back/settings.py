@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 AUTH_USER_MODEL = 'accounts.CustomUser'
 import os
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = str(os.getenv('SECRET_KEY'))
+SECRET_KEY = config("SECRET_KEY")
 
 ENVIRONMENT = 'production'
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -58,11 +58,15 @@ ALLOWED_HOSTS = [
     'localhost',
     'http://localhost:3000',
     '127.0.0.1',
+    'doneminder-back-production.up.railway.app',
+    'doneminder-front-production.up.railway.app'
 ]
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'https://127.0.0.1',
+    'https://doneminder-back-production.up.railway.app',
+    'https://doneminder-front-production.up.railway.app',
 ]
 CORS_ALLOWED_CREDENTIALS = True
 
